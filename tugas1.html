@@ -130,12 +130,16 @@
         </div>
 
         <script>
+            // Calculate square area
+            // Rumusnya sisi * sisi
             function calculateSquare() {
                 const square = document.getElementById("square").value;
-                const result = square * square;
+                const result = square ** 2;
                 document.getElementById("squareResult").innerHTML = result;
             }
 
+            // Calculate rectangle area
+            // Rumusnya panjang * lebar
             function calculateRectangle() {
                 const length = document.getElementById("recLength").value;
                 const height = document.getElementById("recHeight").value;
@@ -143,6 +147,8 @@
                 document.getElementById("recResult").innerHTML = result;
             }
 
+            // Calculate triangle area
+            // Rumusnya alas * tinggi / 2
             function calculateTriangle() {
                 const length = document.getElementById("triLength").value;
                 const height = document.getElementById("triHeight").value;
