@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shape Calculator</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <div class="flex justify-center items-center h-screen bg-green-100">
+            <div
+                class="mx-auto flex flex-col justify-center items-center p-5 rounded-xl shadow-lg bg-white"
+            >
+                <h1 class="text-3xl font-bold text-center text-black">
+                    Shape Calculator
+                </h1>
+
+                <!-- Square Calculator -->
+                <div>
+                    <div
+                        class="mx-auto flex flex-col justify-center items-center"
+                    >
+                        <h1 class="font-bold text-xl">Square Calculator</h1>
+                    </div>
+
+                    <label for="square" class="font-bold text-lg"
+                        >Square Side Length</label
+                    >
+                    <input
+                        type="number"
+                        id="square"
+                        placeholder="Enter square side length"
+                        class="border border-gray-300 rounded-md p-2 mt-2 w-full"
+                    />
+
+                    <button
+                        id="calculateSquare"
+                        class="font-bold p-2 bg-white shadow-md hover:bg-gray-200 transition ease-in-out rounded-md mt-3 w-full"
+                        onclick="calculateSquare()"
+                    >
+                        Calculate Square
+                    </button>
+
+                    <!-- Result Output -->
+                    <p class="italic">
+                        Result: <span id="squareResult"></span>
+                    </p>
+                </div>
+
+                <!-- Rectangle Calculator -->
+                <div class="flex flex-col gap-3 w-full">
+                    <div
+                        class="mx-auto flex flex-col justify-center items-center"
+                    >
+                        <h1 class="font-bold text-xl">Rectangle Calculator</h1>
+                    </div>
+
+                    <label for="recLength" class="font-bold text-lg"
+                        >Rectangle Length</label
+                    >
+                    <input
+                        type="number"
+                        id="recLength"
+                        placeholder="Enter rectangle length"
+                        class="border border-gray-300 rounded-md p-2 mt-2 w-full"
+                    />
+
+                    <label for="recHeight" class="font-bold text-lg"
+                        >Rectangle Height</label
+                    >
+                    <input
+                        type="number"
+                        id="recHeight"
+                        placeholder="Enter rectangle height"
+                        class="border border-gray-300 rounded-md p-2 mt-2 w-full"
+                    />
+
+                    <button
+                        id="calculateRectangle"
+                        class="font-bold p-2 bg-white shadow-md hover:bg-gray-200 transition ease-in-out rounded-md mt-3 w-full"
+                        onclick="calculateRectangle()"
+                    >
+                        Calculate Rectangle
+                    </button>
+
+                    <!-- Result Output -->
+                    <p class="italic">Result: <span id="recResult"></span></p>
+                </div>
+
+                <!-- Triangle Calculator -->
+                <div class="flex flex-col gap-3 w-full">
+                    <div
+                        class="mx-auto flex flex-col justify-center items-center"
+                    >
+                        <h1 class="font-bold text-xl">Triangle Calculator</h1>
+                    </div>
+
+                    <label for="recLength" class="font-bold text-lg"
+                        >Triangle Length</label
+                    >
+                    <input
+                        type="number"
+                        id="triLength"
+                        placeholder="Enter rectangle length"
+                        class="border border-gray-300 rounded-md p-2 mt-2 w-full"
+                    />
+
+                    <label for="recHeight" class="font-bold text-lg"
+                        >Triangle Height</label
+                    >
+                    <input
+                        type="number"
+                        id="triHeight"
+                        placeholder="Enter rectangle height"
+                        class="border border-gray-300 rounded-md p-2 mt-2 w-full"
+                    />
+
+                    <button
+                        id="calculateRectangle"
+                        class="font-bold p-2 bg-white shadow-md hover:bg-gray-200 transition ease-in-out rounded-md mt-3 w-full"
+                        onclick="calculateTriangle()"
+                    >
+                        Calculate Triangle
+                    </button>
+
+                    <!-- Result Output -->
+                    <p class="italic">Result: <span id="triResult"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function calculateSquare() {
+                const square = document.getElementById("square").value;
+                const result = square * square;
+                document.getElementById("squareResult").innerHTML = result;
+            }
+
+            function calculateRectangle() {
+                const length = document.getElementById("recLength").value;
+                const height = document.getElementById("recHeight").value;
+                const result = length * height;
+                document.getElementById("recResult").innerHTML = result;
+            }
+
+            function calculateTriangle() {
+                const length = document.getElementById("triLength").value;
+                const height = document.getElementById("triHeight").value;
+                const result = (length * height) / 2;
+                document.getElementById("triResult").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
